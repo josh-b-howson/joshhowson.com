@@ -1,5 +1,6 @@
 .layout {
-  --gutter-x: 4rem;
+  --gutter-x: 6rem;
+  --max-content-width: 96rem;
   display: flex;
   flex-flow: column nowrap;
   align-items: stretch;
@@ -8,7 +9,9 @@
   main {
     /* grow if there's extra room */
     flex: 1 0 auto;
-
-    padding: var(--gutter-x);
+    width: 100%;
+    align-self: center;
+    max-width: calc(var(--max-content-width) + var(--gutter-x) * 2);
+    padding: 2rem var(--gutter-x);
   }
 }

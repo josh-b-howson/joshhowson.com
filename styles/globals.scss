@@ -1,3 +1,5 @@
+@use 'mixins.scss';
+
 *,
 *::before,
 *::after {
@@ -14,16 +16,31 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+
 /* Override browser styles but keep low specificity */
 :where(:link, :visited) {
-  color: #222;
+  --color-link: hsl(0, 0%, 90%);
+
+  @include mixins.for-light-mode {
+    --color-link: hsl(0, 0%, 10%);
+  }
+
+  color: var(--color-link);
   text-underline-offset: .2em;
 
   &:hover {
-    color: #444;
+    --color-link: hsl(0, 0%, 80%);
+
+    @include mixins.for-light-mode {
+      --color-link: hsl(0, 0%, 40%);
+    }
   }
 
   &:active {
-    color: #000;
+    --color-link: hsl(0, 0%, 100%);
+
+    @include mixins.for-light-mode {
+      --color-link: hsl(0, 0%, 0%);
+    }
   }
 }

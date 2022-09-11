@@ -1,11 +1,13 @@
 import type { NextPage } from 'next'
+import Link from 'next/link'
 import Layout from '../components/Layout/Layout'
 
 const Home: NextPage = () => {
   return (
     <Layout
       title="title!">
-      test 123
+      <h1>Hi I'm Josh.<br /> I build things on the web.</h1>
+      <Link href="/articles">Read more ➡️ </Link>
     </Layout>
   )
 }
