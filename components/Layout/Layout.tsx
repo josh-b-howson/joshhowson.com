@@ -2,6 +2,7 @@ import styles from './Layout.module.scss'
 import { ReactNode } from 'react'
 import Head from 'next/head'
 import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
 
 interface Props {
   children?: ReactNode,
@@ -23,9 +24,7 @@ const Layout = ({
       <main>
         {children}
       </main>
-      <footer>
-        footer
-      </footer>
+      <Footer />
     </div>)
 }
 

@@ -1,4 +1,14 @@
 .layout {
-  background: lavender;
+  --gutter-x: 4rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
   min-height: 100vh;
+
+  main {
+    /* grow if there's extra room */
+    flex: 1 0 auto;
+
+    padding: var(--gutter-x);
+  }
 }

@@ -1,0 +1,9 @@
+.footer {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 4rem;
+  background: hsl(0, 0%, 90%);
+  color: #555;
+  font-size: smaller;
+}
