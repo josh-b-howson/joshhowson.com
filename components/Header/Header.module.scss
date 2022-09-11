@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  align-items: baseline;
+  padding: 4rem;
+
+  
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    justify-content: flex-end;
+    margin-inline-start: auto;
+  }
+
+  .title {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  :global {
+    a {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      svg {
+        height: 1.25em;
+        width: 1.25em;
+        fill: currentColor;
+      }
+    }
+  }
+}

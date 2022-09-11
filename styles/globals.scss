@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Override browser styles but keep low specificity */
+:where(:link, :visited) {
+  color: #222;
+  text-underline-offset: .2em;
+
+  &:hover {
+    color: #444;
+  }
+
+  &:active {
+    color: #000;
+  }
+}
