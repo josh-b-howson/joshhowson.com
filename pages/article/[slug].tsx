@@ -4,18 +4,22 @@ import {
   GetStaticProps,
 } from 'next'
 import { Layout } from '../../components'
-import { fetchAllMarkdownArticles } from '../../utils/articles'
-
+import { fetchAllMarkdownArticles, fetchArticleMarkdown } from '../../utils/articles'
+import Markdown from 'react-markdown'
 interface Props {
-  slug?: string,
+  slug: string,
+  markdown: any,
 }
 
 const Article = ({
   slug,
+  markdown,
 }: Props) => {
   return <Layout
     title="article">
     I am article: {slug}
+    <Markdown
+      children={JSON.parse(markdown).content} />
   </Layout>
 }
 
@@ -40,9 +44,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 // get posts at build time
 export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const slug = Array.isArray(params?.slug)
+    ? params?.slug[0]
+    : params?.slug
+  const markdown = slug && fetchArticleMarkdown(slug)
+
   return {
     props: {
-      slug: params?.slug ?? null,
+      slug: slug ?? null,
+      markdown: JSON.stringify(markdown)
     }
   }
 }
