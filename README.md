@@ -1,3 +1,22 @@
+# Welcome to my personal site's source code
+
+##### Please take a look around.
+
+I built it with:
+
+-TypeScript
+-React.js + Next.js (`create-next-app`)
+-SCSS w/ CSS Modules
+-Simple markdown files for blog posts
+
+And deployed it on Vercel.
+
+---
+
+Auto generated README:
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
