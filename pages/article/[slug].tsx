@@ -8,6 +8,7 @@ import {
   fetchArticleMarkdown,
 } from '../../utils/articles'
 import Markdown from 'react-markdown'
+import Link from 'next/link'
 
 interface Props {
   article: any,
@@ -38,6 +39,9 @@ const Article = ({
     <Markdown>
       {content}
     </Markdown>
+    <p>
+      &lt;&nbsp;<Link href="/articles"><a>Back to articles</a></Link>
+    </p>
     <style jsx>{`
       .date {font-size: smaller}
     `}</style>

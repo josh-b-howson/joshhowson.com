@@ -53,7 +53,7 @@ I remember once hearing a developer say that they store markdown on GitHub to ge
 
 So here is the final stack I ended up using to build this site:
 
-##### Framework: Next.js (with TypeScript)
+#### Framework: Next.js (with TypeScript)
 
 I mainly chose to build in Next.js because I am most familiar with it, and the developer experience is great. I am also a big fan of component-based architecture, so I enjoy building in React or similar frameworks.
 
@@ -61,11 +61,11 @@ It has a few features worth noting, which work well for a simple blog like this 
 
 - Server side generation, and dynamic routes for the article pages
 - `getStaticPaths` - pre-generates said routes at build time for speed
-- `getStaticProps` - pre-generates the actual article page data at build time, also speed
+- `getStaticProps` - pre-generates the actual article page data at build time, and it also helps with speed
 
 I made it a TypeScript project out of principle. Recently I've begun writing all new JS as TS whenever possible to encourage better coding practices. But I'm confident this website will never grow to reap the benefits TypeScript offers.
 
-##### Styles: SCSS, CSS Modules, styled-jsx
+#### Styles: SCSS, CSS Modules, styled-jsx
 
 ###### SCSS
 
@@ -81,11 +81,11 @@ CSS Modules can solve almost every problem, but one thing it can't do is run som
 
 That's where styled-jsx comes in. It can work in tandem with CSS Modules to pass computed JS values to custom properties, which can be used around the stylesheet. Dynamic styles!!
 
-##### Blog setup
+#### Blog setup
 
 In concept I mimicked [this blog post on OpenRelay](https://blog.openreplay.com/creating-a-markdown-blog-powered-by-next-js-in-under-an-hour) to parse my markdown into html.
 
-##### Deployment: Vercel
+#### Deployment: Vercel
 
 I tried [Railway.app](https://railway.app/), but surprisingly it didn't play nice with my repo, and I couldn't get it to build. So I went with [Vercel](https://vercel.com/), which always tends to work.
 
