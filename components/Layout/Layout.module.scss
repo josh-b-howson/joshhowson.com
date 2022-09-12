@@ -1,5 +1,5 @@
 .layout {
-  --gutter-x: 6rem;
+  --gutter-x: clamp(2rem, 4vw, 6rem);
   display: flex;
   flex-flow: column nowrap;
   align-items: stretch;
