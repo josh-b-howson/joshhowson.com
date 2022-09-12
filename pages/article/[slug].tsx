@@ -34,7 +34,7 @@ const Article = ({
     <h1>{title}</h1>
     <div
       className="date">
-      {new Date(date).toDateString()}
+      {date}
     </div>
     <Markdown>
       {content}

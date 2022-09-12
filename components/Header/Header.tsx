@@ -9,7 +9,7 @@ const Header = () => {
     className={styles.header}>
     <nav>
       <Link href="/">Home</Link>
-      <Link href="#">Resume</Link>
+      <Link href="/josh-howson-resume.pdf"><a target="_blank">Resume</a></Link>
       <Link href="/articles">Articles</Link>
       <Link href="https://github.com/josh-b-howson/joshhowson.com"><a target="_blank"><SVGGithubLogo />Source code</a></Link>
     </nav>

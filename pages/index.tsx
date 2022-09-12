@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         className='things'>
         <Link href='/josh-howson-resume.pdf'><a target="_blank">Take a look at my resume</a></Link>
         <Link href='/articles'>Read some articles I wrote</Link>
-        <Link href='/resume'>Check out this site&apos;s source code</Link>
+        <Link href='https://github.com/josh-b-howson/joshhowson.com'><a target="_blank">Check out this site&apos;s source code</a></Link>
       </div>
       <small>
         <br />
