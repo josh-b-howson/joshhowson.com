@@ -32,8 +32,7 @@ const Home: NextPage = () => {
           or...
           <br />
           <br />
-        <p>
-          Click around on <Link href='https://www.boatline.com'><a target="_blank">Boatline.com</a></Link>, whose UI I've spent the better part of 2 years building. If anything looks nice, I built it. If something's broken, I swear it wasn't me 🤞</p>
+        <p>Click around on <Link href='https://www.boatline.com'><a target="_blank">Boatline.com</a></Link>, whose UI I&apos;ve spent the better part of 2 years building. If anything looks nice, I built it. If something&apos;s broken, I swear it wasn&apos;t me 🤞</p>
       </small>
       <style jsx>{`
         h1 {
