@@ -19,9 +19,12 @@ const Articles = ({
     title="Articles">
     <ul>
       {articlesData.map((article, index) => {
-        console.log(article)
+        const { data } = article
         return <li key={index}>
-          <Link href={`/article/${article?.slug}`}>{article?.data?.title}</Link></li>
+          <Link href={`/article/${article?.slug}`}>{article?.data?.title}</Link>
+          <br />
+          {data?.metaDesc}
+        </li>
       })}
     </ul>
   </Layout>

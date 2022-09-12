@@ -11,7 +11,7 @@
 }
 
 body {
-  font-size: 2rem;
+  font-size: clamp(1.6rem, calc(1.5rem + .5vw), 2rem);
   margin: 0;
   font-family: 'Inter', sans-serif;
 }
@@ -43,4 +43,12 @@ body {
       --color-link: hsl(0, 0%, 0%);
     }
   }
+}
+
+:where(p) {
+  line-height: 1.6;
+}
+
+:where(ul) {
+  line-height: 1.8;
 }

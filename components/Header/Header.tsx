@@ -6,6 +6,7 @@ const Header = () => {
   return <header
     className={styles.header}>
     <nav>
+      <Link href="/">Home</Link>
       <Link href="https://github.com/josh-b-howson/joshhowson.com"><a target="_blank"><SVGGithubLogo />Source code</a></Link>
       <Link href="/articles">Articles</Link>
       <Link href="#">Resume</Link>

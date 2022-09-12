@@ -1,17 +1,24 @@
 .layout {
   --gutter-x: 6rem;
-  --max-content-width: 96rem;
   display: flex;
   flex-flow: column nowrap;
   align-items: stretch;
   min-height: 100vh;
 
   main {
+    --max-content-width: 96rem;
     /* grow if there's extra room */
     flex: 1 0 auto;
     width: 100%;
     align-self: center;
     max-width: calc(var(--max-content-width) + var(--gutter-x) * 2);
     padding: 2rem var(--gutter-x);
+
+  }
+
+  :global {
+    .article p {
+      max-width: 60ch;
+    }
   }
 }

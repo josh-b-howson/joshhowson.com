@@ -8,7 +8,6 @@ import {
   fetchArticleMarkdown,
 } from '../../utils/articles'
 import Markdown from 'react-markdown'
-import { useEffect } from 'react'
 
 interface Props {
   article: any,
@@ -19,9 +18,17 @@ const Article = ({
 }: Props) => {
   const articleData = JSON.parse(article)
   const { content, data, excerpt } = articleData
+  const {
+    title,
+    metaTitle,
+    date,
+  } = data
 
   return <Layout
-    title={data?.title}>
+    title={metaTitle}
+    mainClassName="article">
+      <h1>{title}</h1>
+      <p>{new Date(date).toDateString()}</p>
     <Markdown>
       {content}
     </Markdown>
