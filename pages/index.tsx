@@ -15,12 +15,12 @@ const Home: NextPage = () => {
       titleSuffix=''>
       <div className="emoji">👋</div>
       <h1>Hi I&apos;m Josh,<br /> I build things on the web.</h1>
-      <p>You're seeing a very early version of this website. It was born {new Date(daysSinceStart).getTime()} day{daysSinceStart !== 1 && 's'} ago.</p>
-      <p>While I'm working on making this more presentable, why not...</p>
+      <p>You&apos;re seeing a very early version of this website. It was born {new Date(daysSinceStart).getTime()} day{daysSinceStart !== 1 && 's'} ago.</p>
+      <p>While I&apos;m working on making this more presentable, why not...</p>
       <div
         className='things'>
         <Link href='/resume'>Take a look at my resume</Link>
-        <Link href='/resume'>Check out this site's source code</Link>
+        <Link href='/resume'>Check out this site&apos;s source code</Link>
         <Link href='/articles'>Read some articles I wrote</Link>
       </div>
       <style jsx>{`
