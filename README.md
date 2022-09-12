@@ -4,10 +4,10 @@
 
 I built it with:
 
--TypeScript
--React.js + Next.js (`create-next-app`)
--SCSS w/ CSS Modules
--Simple markdown files for blog posts
+- TypeScript
+- React.js + Next.js (`create-next-app`)
+- SCSS w/ CSS Modules
+- Simple markdown files for blog posts
 
 And deployed it on Vercel.
 
