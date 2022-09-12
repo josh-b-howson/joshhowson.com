@@ -10,13 +10,22 @@ export const fetchAllMarkdownArticles = () => {
   return files
 }
 
+/**
+ * 
+ * @param article the article's slug
+ * @returns the markdown data from matter()
+ */
 export const fetchArticleMarkdown = (article: string) => {
   if (!article) return null
+
 
   // build file path
   const fileName = fs.readFileSync(`articles/${article}.md`, 'utf-8')
 
   // generate markdown from file contents
-  const markdown = matter(fileName)
-  return markdown
+  const markdown = matter(fileName, { excerpt: true })
+  return {
+    ...markdown,
+    slug: article, // also provide the file name
+  }
 }

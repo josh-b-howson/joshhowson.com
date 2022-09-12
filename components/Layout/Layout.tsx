@@ -17,7 +17,7 @@ const Layout = ({
     <div
       className={styles.layout}>
       <Head>
-        <title>{title}</title>
+        <title>{title} - Josh Howson</title>
         <meta name="description" content="Meta description" />
       </Head>
       <Header />

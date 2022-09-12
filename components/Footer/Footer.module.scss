@@ -1,14 +1,15 @@
 .footer {
-  --color-footer: hsl(0, 0%, 0%);
+  --color-footer: hsl(0, 0%, 70%);
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   padding: 4rem;
   background: var(--bg-footer);
+  color: var(--color-footer);
   font-size: smaller;
 
   @media (prefers-color-scheme:light) {
-    color: hsl(0, 0%, 40%);
+    --color-footer: hsl(0, 0%, 40%);
   }
 
   :global {
