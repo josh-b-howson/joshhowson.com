@@ -8,7 +8,7 @@ import Layout from '../components/Layout/Layout'
 const Home: NextPage = () => {
   const startDate: any = new Date('2022-09-11')
   const now: any = new Date()
-  const daysSinceStart: any = Math.round(Math.abs(now - startDate) / (1000 * 60 * 60 * 24))
+  const daysSinceStart: any = Math.floor(Math.abs(now - startDate) / (1000 * 60 * 60 * 24))
   return (
     <Layout
       title="Josh Howson - UI Engineer"
