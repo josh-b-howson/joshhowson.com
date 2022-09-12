@@ -30,11 +30,17 @@ const Article = ({
   return <Layout
     title={metaTitle}
     mainClassName="article">
-      <h1>{title}</h1>
-      <p>{new Date(date).toDateString()}</p>
+    <h1>{title}</h1>
+    <div
+      className="date">
+      {new Date(date).toDateString()}
+    </div>
     <Markdown>
       {content}
     </Markdown>
+    <style jsx>{`
+      .date {font-size: smaller}
+    `}</style>
   </Layout>
 }
 
