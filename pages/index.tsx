@@ -15,23 +15,23 @@ const Home: NextPage = () => {
       titleSuffix=''>
       <h1>
         <div className="emoji">👋</div>
-        Hi I&apos;m Josh,<br /><br/>
+        Hi I&apos;m Josh,<br /><br />
         I build things on the web.
       </h1>
       <p>You&apos;re seeing a very early version of this website. It was born <code>{new Date(daysSinceStart).getTime()} day{daysSinceStart !== 1 && 's'} ago</code>.</p>
       <p>But don&apos;t let that hold you up. While I&apos;m working on making this more presentable, why not...</p>
       <div
         className='things'>
-        <Link href='/resume'>Take a look at my resume</Link>
+        <Link href='/josh-howson-resume.pdf'><a target="_blank">Take a look at my resume</a></Link>
         <Link href='/articles'>Read some articles I wrote</Link>
         <Link href='/resume'>Check out this site&apos;s source code</Link>
       </div>
       <small>
-          <br />
-          <br />
-          or...
-          <br />
-          <br />
+        <br />
+        <br />
+        or...
+        <br />
+        <br />
         <p>Click around on <Link href='https://www.boatline.com'><a target="_blank">Boatline.com</a></Link>, whose UI I&apos;ve spent the better part of 2 years building. If anything looks nice, I built it. If something&apos;s broken, I swear it wasn&apos;t me 🤞</p>
       </small>
       <style jsx>{`
