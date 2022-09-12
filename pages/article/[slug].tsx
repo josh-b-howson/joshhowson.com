@@ -13,11 +13,14 @@ interface Props {
   article: any,
 }
 
+/**
+ * Read article page.
+ */
 const Article = ({
   article,
 }: Props) => {
   const articleData = JSON.parse(article)
-  const { content, data, excerpt } = articleData
+  const { content, data } = articleData
   const {
     title,
     metaTitle,

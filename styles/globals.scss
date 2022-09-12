@@ -19,28 +19,30 @@ body {
 
 /* Override browser styles but keep low specificity */
 :where(:link, :visited) {
-  --color-link: hsl(0, 0%, 90%);
+  --color-link-hue: 220;
+  --color-link-saturation: 30%;
+  --color-link: hsl(var(--color-link-hue), var(--color-link-saturation), 90%);
 
   @include mixins.for-light-mode {
-    --color-link: hsl(0, 0%, 10%);
+    --color-link: hsl(var(--color-link-hue), var(--color-link-saturation), 10%);
   }
 
   color: var(--color-link);
   text-underline-offset: .2em;
 
   &:hover {
-    --color-link: hsl(0, 0%, 80%);
+    --color-link: hsl(var(--color-link-hue), var(--color-link-saturation), 80%);
 
     @include mixins.for-light-mode {
-      --color-link: hsl(0, 0%, 40%);
+      --color-link: hsl(var(--color-link-hue), var(--color-link-saturation), 20%);
     }
   }
 
   &:active {
-    --color-link: hsl(0, 0%, 100%);
+    --color-link: hsl(var(--color-link-hue), var(--color-link-saturation), 100%);
 
     @include mixins.for-light-mode {
-      --color-link: hsl(0, 0%, 0%);
+      --color-link: hsl(var(--color-link-hue), var(--color-link-saturation), 0%);
     }
   }
 }

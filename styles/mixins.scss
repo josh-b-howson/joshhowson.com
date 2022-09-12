@@ -1,3 +1,4 @@
+/* Media query to target browsers that prefer light mode */
 @mixin for-light-mode {
   @media (prefers-color-scheme: light) {
     @content;

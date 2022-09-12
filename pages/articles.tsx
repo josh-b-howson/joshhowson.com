@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from 'next'
+import type { GetStaticProps } from 'next'
 import { Layout } from '../components'
 import React from 'react'
 import {
@@ -11,25 +11,40 @@ interface Props {
   articles: string[],
 }
 
+/**
+ * Articles browse page.
+ */
 const Articles = ({
   articles,
 }: Props) => {
   const articlesData = articles.map(article => JSON.parse(article))
   return <Layout
     title="Articles">
-    <ul>
+    <ul
+      className='articles'>
       {articlesData.map((article, index) => {
         const { data } = article
-        return <li key={index}>
+        return <li
+          key={index}>
           <Link href={`/article/${article?.slug}`}>{article?.data?.title}</Link>
+          <br />
+          {data?.date}
           <br />
           {data?.metaDesc}
         </li>
       })}
     </ul>
+    <style jsx>{`
+      .articles :global(:visited) {
+        color: VisitedText;
+      }
+    `}</style>
   </Layout>
 }
 
+/** 
+ * @returns an array of all articles and their contents & metadata.
+ */
 export const getStaticProps: GetStaticProps = async () => {
   // first get a list of all articles .md files
   const articleFiles = fetchAllMarkdownArticles().map(file =>

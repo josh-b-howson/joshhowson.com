@@ -12,6 +12,9 @@ interface Props {
   titleSuffix?: string,
 }
 
+/**
+ * Page layout component.
+ */
 const Layout = ({
   title,
   children,
@@ -40,7 +43,8 @@ const Layout = ({
         {children}
       </main>
       <Footer />
-    </div >)
+    </div >
+  )
 }
 
 export default Layout

@@ -18,7 +18,6 @@ export const fetchAllMarkdownArticles = () => {
 export const fetchArticleMarkdown = (article: string) => {
   if (!article) return null
 
-
   // build file path
   const fileName = fs.readFileSync(`articles/${article}.md`, 'utf-8')
 

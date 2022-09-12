@@ -1,3 +1,5 @@
+@use '../../styles/mixins.scss';
+
 .footer {
   --color-footer: hsl(0, 0%, 70%);
   display: flex;
@@ -8,13 +10,13 @@
   color: var(--color-footer);
   font-size: smaller;
 
-  @media (prefers-color-scheme:light) {
+  @include mixins.for-light-mode {
     --color-footer: hsl(0, 0%, 40%);
   }
 
   :global {
     .copy {
-      border-top: 1px solid hsl(0, 0, 50, .2);
+      border-top: 1px solid hsl(0, 0, 50, .3);
       width: 100%;
       text-align: center;
       padding-top: 4rem;

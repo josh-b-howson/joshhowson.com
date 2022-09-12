@@ -1,6 +1,6 @@
 ---
 title: 'I nearly made this website WAY too complex'
-metaDesc: 'Here is what I ended up using instead'
+metaDesc: 'Here is what I ended up using instead.'
 date: '2022-09-11'
 tags:
   - nextjs
