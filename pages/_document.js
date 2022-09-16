@@ -1,5 +1,4 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import Script from 'next/script'
 
 export default function Document() {
   return (
@@ -10,9 +9,7 @@ export default function Document() {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;900&display=swap" rel="stylesheet" />
         <meta name="color-scheme" content="dark light"></meta>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-6GFT8FSH33"></script>
-      </Head>
-      <body>
-        <Script
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -21,6 +18,8 @@ export default function Document() {
 
               gtag('config', 'G-6GFT8FSH33');
             `}} />
+      </Head>
+      <body>
         <Main />
         <NextScript />
       </body>
