@@ -18,7 +18,9 @@ const Home: NextPage = () => {
         <div>Hi I&apos;m Josh,</div>
         <div>I build things on the web.</div>
       </h1>
-      <p>You&apos;re seeing a very early version of this website. It was born <code>{new Date(daysSinceStart).getTime()} day{daysSinceStart !== 1 && 's'} ago</code>.</p>
+      <p>You&apos;re seeing a very early version of this website. 
+        {/* It was born <code>{new Date(daysSinceStart).getTime()} day{daysSinceStart !== 1 && 's'} ago</code>. */}
+        </p>
       <p>But don&apos;t let that hold you up. While I&apos;m working on making this more presentable, why not...</p>
       <div
         className='things'>
