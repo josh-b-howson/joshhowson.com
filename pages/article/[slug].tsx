@@ -9,6 +9,7 @@ import {
 } from '../../utils/articles'
 import Markdown from 'react-markdown'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 interface Props {
   article: any,
@@ -27,6 +28,29 @@ const Article = ({
     metaTitle,
     date,
   } = data
+
+  const [codepenEmbedded, setCodepenEmbedded] = useState(false)
+
+  useEffect(() => {
+    if (codepenEmbedded) return
+
+    const codepenElement: any = document.evaluate("//p[contains(., 'CODEPEN_EMBED')]", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null)
+    let index = 0
+    let result = codepenElement?.snapshotItem(index)
+    while (result) {
+      console.log(result)
+      const textContent = result.textContent
+      const id = textContent?.slice(textContent.lastIndexOf(':') + 1, textContent.lastIndexOf(']'))
+      result.innerHTML = `
+      <iframe height="400" style="width: 100%;" scrolling="no" title="fruits 4" src="https://codepen.io/josh-howson/embed/${id}?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      See <a href="https://codepen.io/josh-howson/pen/${id}">the Pen</a> by Josh Howson (<a href="https://codepen.io/josh-howson">@josh-howson</a>)
+      on <a href="https://codepen.io">CodePen</a>.
+      </iframe>
+      `
+      result = codepenElement?.snapshotItem(++index)
+    }
+    setCodepenEmbedded(true)
+  }, []);
 
   return <Layout
     title={metaTitle}
