@@ -1,7 +1,7 @@
 ---
 title: 'Centered content that scrolls right off the screen'
 metaDesc: 'A cool trick using CSS calc(), min() and margins.'
-date: '2022-09-11'
+date: '2022-09-26'
 tags:
   - nextjs
 active: false

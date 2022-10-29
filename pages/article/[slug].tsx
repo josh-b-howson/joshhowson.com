@@ -42,11 +42,12 @@ const Article = ({
       const textContent = result.textContent
       const id = textContent?.slice(textContent.lastIndexOf(':') + 1, textContent.lastIndexOf(']'))
       result.innerHTML = `
-      <iframe height="400" style="width: 100%;" scrolling="no" title="fruits 4" src="https://codepen.io/josh-howson/embed/${id}?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      <iframe height="100%" style="width: 100%;" scrolling="no" src="https://codepen.io/josh-howson/embed/${id}?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
       See <a href="https://codepen.io/josh-howson/pen/${id}">the Pen</a> by Josh Howson (<a href="https://codepen.io/josh-howson">@josh-howson</a>)
       on <a href="https://codepen.io">CodePen</a>.
       </iframe>
       `
+      result.classList.add('codepen')
       result = codepenElement?.snapshotItem(++index)
     }
     setCodepenEmbedded(true)

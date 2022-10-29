@@ -6,19 +6,51 @@
   min-height: 100vh;
 
   main {
-    --max-content-width: 96rem;
-    /* grow if there's extra room */
     flex: 1 0 auto;
-    width: 100%;
-    align-self: center;
-    max-width: calc(var(--max-content-width) + var(--gutter-x) * 2);
-    padding: 2rem var(--gutter-x);
+    --max-content-width: 96rem;
+    display: grid;
+    grid-template-columns: [start] 1fr [content-start] minmax(0, var(--max-content-width)) [content-end] 1fr [end];
+    grid-auto-flow: dense;
+    place-content: start;
 
+    &> :global(*) {
+      grid-column: content-start / content-end;
+    }
+
+    :global {
+
+      h1,
+      p {
+        margin-block: 0;
+      }
+    }
   }
 
   :global {
-    .article p {
-      max-width: 60ch;
+    .article {
+
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      ul,
+      ol,
+      .date {
+        width: 100%;
+        align-self: center;
+        max-width: calc(var(--max-content-width) + var(--gutter-x) * 2);
+        padding: 2rem var(--gutter-x);
+      }
+
+      .codepen {
+        grid-column: start / end;
+        max-width: unset;
+        height: 60vh;
+        min-height: 50rem
+      }
     }
   }
 }

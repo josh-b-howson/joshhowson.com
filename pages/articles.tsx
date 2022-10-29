@@ -33,7 +33,7 @@ const Articles = ({
         }
         return <li
           key={index}
-          data-article-number={pad(articlesData.length - index, 3)}>
+          data-article-number={pad(articlesToMap.length - index, 3)}>
           <h4>{article?.data?.title}</h4>
           <div className="date">{data?.date}</div>
           {data?.metaDesc}
@@ -42,9 +42,9 @@ const Articles = ({
       })}
     </ul>
     <style jsx>{`
-      .articles {display:flex; flex-flow:column nowrap; align-items:flex-start; gap:2rem; list-style:none; margin:0; padding:0}
+      .articles {display:flex; flex-flow:column nowrap; align-items:flex-start; gap:2rem; list-style:none; margin:0; padding:0 var(--gutter-x)}
       .articles h4 {margin:0}
-      li {width:100%; max-width:500px; position:relative; border:.1em solid currentColor; padding:1em 2em; border-radius:.3em; overflow:hidden; line-height:1.4}
+      li {max-width:50rem; position:relative; border:.1em solid currentColor; padding:1em 2em; border-radius:.3em; overflow:hidden; line-height:1.4}
       li::before {content:attr(data-article-number); display:inline-block; position:absolute; bottom:-.4em; right:-.1em; font-weight:900; font-size:6em; opacity:.05}
       .date {font-size:smaller; margin-block:.5em}
       .articles :global(a) {position:absolute; inset:0; z-index:1}
