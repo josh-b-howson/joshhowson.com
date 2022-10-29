@@ -1,4 +1,5 @@
 @use 'mixins.scss';
+@use 'fonts.scss';
 
 *,
 *::before,
@@ -65,4 +66,5 @@ body {
   border: .1em solid currentColor;
   padding: .1em .4em;
   white-space: nowrap;
+  font-size: .9em;
 }
