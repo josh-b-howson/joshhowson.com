@@ -58,6 +58,7 @@ body {
 
 :where(ul) {
   line-height: 1.8;
+  list-style-position: inside;
 }
 
 :where(code) {
